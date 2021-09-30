@@ -6,7 +6,7 @@ function Navbar() {
     return (
         <div className={styles.container}>
             <div className="logo">
-                <img src={logo} alt="" />
+                <img src={logo} alt="" className={styles.img}/>
                 {/* <i class="fas fa-bone"></i> */}
             </div>
             <nav className={styles.menu}>

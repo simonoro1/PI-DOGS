@@ -1,18 +1,21 @@
 .container {
-    height: 80px;
+    height: 70px;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    /* border-bottom: 1px solid gainsboro; */
 
 }
 
 .nav{
     display: flex;
 }
-img {
+
+.img {
     width: 40px;
     cursor: pointer;
+    margin-left: 30px;
 }
 
 li {

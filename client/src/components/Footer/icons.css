@@ -1,0 +1,14 @@
+.footer-i {
+    margin: 3px 0;
+    color: black;
+}
+
+.instagram:hover {
+        color: mediumorchid;
+}
+.linkedin:hover {
+    color: cornflowerblue;
+}
+.github:hover {
+    color: orange;
+}
