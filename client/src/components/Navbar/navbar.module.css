@@ -1,0 +1,26 @@
+.container {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav{
+    display: flex;
+}
+img {
+    width: 40px;
+    cursor: pointer;
+}
+
+li {
+    margin-right: 40px;
+    list-style: none;
+}
+
+i{
+    font-size: 30px;
+    color: RGB(29, 155 , 240);
+}

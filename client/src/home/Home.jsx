@@ -1,9 +1,22 @@
 import React from 'react';
+import Navbar from '../components/Navbar/Navbar';
+import styles from './home.module.css'
+import Dog from '../components/Dog/Dog';
+import Search from '../components/Search/Search';
+import Footer from '../components/Footer/Footer';
+import Dogs from '../components/Dogs/Dogs';
 
-const Home = () => {
+const Home =  () => {
+ 
     return (
-        <div className='home'>
-            hola q onda
+        <div className="">
+            <div className={styles.container}>
+                <Navbar/>
+                <Search/>
+                {/* <Dog/> */}
+                <Dogs/>
+            </div>
+            <Footer/>            
         </div>
     )
 }

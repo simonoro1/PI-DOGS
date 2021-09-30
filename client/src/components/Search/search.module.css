@@ -1,0 +1,10 @@
+.container {
+    /* background:hsla(34,0%,100%,.5); */
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}

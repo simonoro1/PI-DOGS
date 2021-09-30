@@ -13,15 +13,15 @@ router.get('/', async (req, res) => {
 })
 
 
-router.get('/', async (req, res) => {
-    try {
-        const response = await axios.get(`https://api.thedogapi.com/v1/breeds`)
-        const filtered = response.data.filter( dog => dog.name.includes(req.query.name))
-        res.status(200).send(filtered);
-    } catch (error) {
-        console.log(error);
-    }
-})
+// router.get('/', async (req, res) => {
+//     try {
+//         const response = await axios.get(`https://api.thedogapi.com/v1/breeds`)
+//         const filtered = response.data.filter( dog => dog.name.includes(req.query.name))
+//         res.status(200).send(filtered);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// })
 
 
 module.exports = router
