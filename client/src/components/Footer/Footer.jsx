@@ -11,9 +11,9 @@ function Footer() {
                     <img src={logo} alt="" className={styles.logo}/>
                 </div>
                 <div className={styles.details}>
-                    <i class="fab fa-instagram footer-i instagram"></i>
-                    <i class="fab fa-linkedin-in footer-i linkedin"></i>
-                    <i class="fab fa-github footer-i github"></i>
+                    <i className="fab fa-instagram footer-i instagram"></i>
+                    <i className="fab fa-linkedin-in footer-i linkedin"></i>
+                    <i className="fab fa-github footer-i github"></i>
                 </div>
             </div>
             <div className={styles.bottom}>

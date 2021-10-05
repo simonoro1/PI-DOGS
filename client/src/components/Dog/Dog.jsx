@@ -1,49 +1,39 @@
 import React from "react";
 import styles from "./dog.module.css";
+import Detail from "../Detail/Detail";
+import "./fav.css";
+import "./fav.js";
+import "./details.css";
 
-function Dog() {
-  let dog = {
-    weight: {
-      imperial: "33 - 55",
-      metric: "15 - 25"
-      },
-      height: {
-      imperial: "23 - 29",
-      metric: "58 - 74"
-      },
-      id: 25,
-      name: "Azawakh",
-      bred_for: "Livestock guardian, hunting",
-      breed_group: "Hound",
-      life_span: "10 - 13 years",
-      temperament: "Aloof, Affectionate, Attentive, Rugged, Fierce, Refined",
-      reference_image_id: "SkvZgx94m",
-      image: {
-      id: "SkvZgx94m",
-      width: 1024,
-      height: 768,
-      url: "https://cdn2.thedogapi.com/images/SkvZgx94m.jpg"
-      }
-  };
-
-  let temperaments = dog.temperament.split(", ");
-  console.log(temperaments);
+function Dog(props) {
+  let {name, img, temperament} = props;
+  let temperaments = temperament.split(", ").slice(0, 6);
   return (
     <div className={styles.dog}>
-      <div className={styles.imgContainer}>
-        <img src={dog.image.url} alt=""  className={styles.img} />
-      </div>
-      <div className={styles.description}>
-        <div className={styles.title}>
-          <h2>{dog.name}</h2>
-          {/* <i className="fas fa-heart"></i> */}
-        </div>
-        <div className={styles.temperaments}>
-          {temperaments.map((temperament) => {
-            return <p className={styles.temperament}>#{temperament}</p>;
-          })}
-        </div>
-      </div>
+      <details>
+        <summary>
+          <div className={styles.imgContainer}>
+            <img src={img} alt="" className={styles.img} />
+            <span className={styles.span}>Learn More !</span>
+          </div>
+          <div class="details-modal-overlay"></div>
+        </summary>
+        <Detail/>
+     </details>
+          <div className={styles.description}>
+            <div className={styles.title}>
+              <h2>{name}</h2>
+            </div>
+            <div className={styles.temperaments}>
+              {temperaments.map((temperament) => {
+                return <p className={styles.temperament}>#{temperament}</p>;
+              })}
+            </div>
+            <div class="placement">
+              <div class="heart"></div>
+            </div>
+            
+          </div>
     </div>
   );
 }

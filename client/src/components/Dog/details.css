@@ -1,0 +1,31 @@
+
+
+.details-modal-overlay {
+    transition: opacity 1s ease-out;
+    pointer-events: none;
+    background: rgba(15, 23, 42, 0.8);
+    position: fixed;
+    opacity: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+}
+
+details[open] .details-modal-overlay {
+    pointer-events: all;
+    opacity: 0.5 ;
+}
+
+
+
+details summary {
+    list-style: none;
+}
+details summary:focus {
+    outline: none;
+}
+details summary::-webkit-details-marker {
+    display: none;
+}
+

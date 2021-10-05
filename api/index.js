@@ -3,6 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const dotenv = require('dotenv').config();
 const dogsRoute = require('./routes/dogs')
+const temperamentRoute = require('./routes/temperament')
 
 
 
@@ -15,6 +16,8 @@ mongoose.connect(process.env.MONGO_URL)
 
 app.use(express.json())
 app.use('/dogs', dogsRoute)
+app.use('/temperament', temperamentRoute)
+
 
 
 
