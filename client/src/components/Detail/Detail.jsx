@@ -1,8 +1,12 @@
-import React from 'react'
+import React  from 'react'
+import { useSelector } from 'react-redux'
 import './detail.css'
 
 function Detail() {
+    
+    const dog = useSelector(state => state.detailDog[0])
     return (
+        dog ?
         <div class="details-modal">
         <div class="details-modal-close">
           <svg
@@ -21,17 +25,39 @@ function Detail() {
           </svg>
         </div>
         <div class="details-modal-title">
-          <h1>My details modal</h1>
+          <h1>{dog.name}</h1>
         </div>
         <div class="details-modal-content">
-          <p>
-            You can click the X in the corner or click the overlay to close
-            this modal. Something like this could be useful as a nice way to
-            show additional information, but that's about as far as I would
-            take it. It's just a nice way of styling the details element.
-          </p>
+          <div className="imgContainerDetail">
+            <img src={dog.image.url} alt="" className="imgDetail"/>
+          </div>
+          <div className="box">
+            <h3>Type</h3>
+            <p className="p breed">{dog.breed_group}</p>
+          </div>
+          <div className="box">
+            <h3>Weight</h3>
+            <p className="p weight">{dog.weight.imperial} lb</p>
+          </div>
+          <div className="box">
+            <h3>Height</h3>
+            <p className="p height">{dog.height.imperial}"</p>
+          </div>
+          <div className="box">
+            <h3>Bred For</h3>
+            <p className="p bred">{dog.bred_for}</p>
+          </div>
+          <div className="box">
+            <h3>Life Span</h3>
+            <p className="p lifeSpan">{dog.life_span}</p>
+          </div>
+          <div className="box">
+            <h3>Temperament</h3>
+            <p className="p temperament">{dog.temperament}</p>
+          </div>
         </div>
       </div>
+      : <p> loading </p>
     )
 }
 

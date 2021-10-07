@@ -1,20 +1,26 @@
 import React from "react";
 import styles from "./dog.module.css";
 import Detail from "../Detail/Detail";
-import "./fav.css";
-import "./fav.js";
 import "./details.css";
+import { useDispatch } from "react-redux";
+import { fetchDetail } from "../../actions/actions";
 
 function Dog(props) {
-  let {name, img, temperament} = props;
-  let temperaments = temperament.split(", ").slice(0, 6);
+  const dispatch = useDispatch()
+  let {name, img, temperament, id} = props;
+  let temperaments = temperament.split(", ").slice(0, 5);
+
+  const dispatchScroll = () => {
+    dispatch(fetchDetail(id))
+    window.scrollTo({top: 0, behavior:"smooth"})
+  }
   return (
     <div className={styles.dog}>
       <details>
         <summary>
-          <div className={styles.imgContainer}>
+          <div className={styles.imgContainer} onClick={dispatchScroll}>
             <img src={img} alt="" className={styles.img} />
-            <span className={styles.span}>Learn More !</span>
+            {/* <span className={styles.span}>Learn More !</span> */}
           </div>
           <div class="details-modal-overlay"></div>
         </summary>
@@ -29,10 +35,6 @@ function Dog(props) {
                 return <p className={styles.temperament}>#{temperament}</p>;
               })}
             </div>
-            <div class="placement">
-              <div class="heart"></div>
-            </div>
-            
           </div>
     </div>
   );

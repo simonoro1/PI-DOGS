@@ -9,6 +9,7 @@ import { fetchDogs} from '../actions/actions';
 import {useDispatch} from 'react-redux'
 const Home = () => {
     const dispatch = useDispatch()
+    
     useEffect(() => {
         dispatch(fetchDogs())
     }, [])

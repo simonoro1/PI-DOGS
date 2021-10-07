@@ -3,7 +3,8 @@
 .details-modal-overlay {
     transition: opacity 1s ease-out;
     pointer-events: none;
-    background: rgba(15, 23, 42, 0.8);
+    background: rgba(15, 23, 42, 0.2);
+    backdrop-filter: blur(10px);
     position: fixed;
     opacity: 0;
     bottom: 0;
