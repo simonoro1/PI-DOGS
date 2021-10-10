@@ -23,7 +23,16 @@ li {
     list-style: none;
 }
 
-i{
+/* i{
     font-size: 30px;
     color: RGB(29, 155 , 240);
+} */
+
+.links {
+    text-decoration: none;
+    color: black;
+    padding-bottom: 10px;
+}
+.links:hover {
+    border-bottom: 4px solid cornflowerblue;
 }

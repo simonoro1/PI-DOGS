@@ -3,12 +3,12 @@ import styles from "./dog.module.css";
 import Detail from "../Detail/Detail";
 import "./details.css";
 import { useDispatch } from "react-redux";
-import { fetchDetail } from "../../actions/actions";
+import { fetchDetail, findTemperament } from "../../actions/actions";
 
 function Dog(props) {
   const dispatch = useDispatch()
-  let {name, img, temperament, id} = props;
-  let temperaments = temperament.split(", ").slice(0, 5);
+  let {name, img, temperament, id, weight} = props;
+  let temperaments = temperament.split(", ").slice(0, 3);
 
   const dispatchScroll = () => {
     dispatch(fetchDetail(id))
@@ -32,8 +32,13 @@ function Dog(props) {
             </div>
             <div className={styles.temperaments}>
               {temperaments.map((temperament) => {
-                return <p className={styles.temperament}>#{temperament}</p>;
+                return <p className={styles.temperament} onClick={() => dispatch(findTemperament(temperament))}>#{temperament}</p>;
               })}
+            </div>
+            <div className={styles.weightContainer}>
+              <i class="fas fa-weight-hanging weighty">
+                <h3 className={styles.weight}>{weight} lb</h3>
+              </i>
             </div>
           </div>
     </div>

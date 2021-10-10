@@ -24,40 +24,42 @@ function Detail() {
               />
           </svg>
         </div>
-        <div class="details-modal-title">
-          <h1>{dog.name}</h1>
-        </div>
         <div class="details-modal-content">
           <div className="imgContainerDetail">
             <img src={dog.image.url} alt="" className="imgDetail"/>
           </div>
-          <div className="box">
-            <h3>Type</h3>
-            <p className="p breed">{dog.breed_group}</p>
-          </div>
-          <div className="box">
-            <h3>Weight</h3>
-            <p className="p weight">{dog.weight.imperial} lb</p>
-          </div>
-          <div className="box">
-            <h3>Height</h3>
-            <p className="p height">{dog.height.imperial}"</p>
-          </div>
-          <div className="box">
-            <h3>Bred For</h3>
-            <p className="p bred">{dog.bred_for}</p>
-          </div>
-          <div className="box">
-            <h3>Life Span</h3>
-            <p className="p lifeSpan">{dog.life_span}</p>
-          </div>
-          <div className="box">
-            <h3>Temperament</h3>
-            <p className="p temperament">{dog.temperament}</p>
+          <div className="border">
+            <div class="details-modal-title">
+              <h1>{dog.name}</h1>
+            </div>
+            <div className="box">
+              <h3>Type</h3>
+              <p className="p breed">{dog.breed_group}</p>
+            </div>
+            <div className="box">
+              <h3>Weight</h3>
+              <p className="p weight">{dog.weight.imperial} lb</p>
+            </div>
+            <div className="box">
+              <h3>Height</h3>
+              <p className="p height">{dog.height.imperial}"</p>
+            </div>
+            <div className="box">
+              <h3>Bred For</h3>
+              <p className="p bred">{dog.bred_for}</p>
+            </div>
+            <div className="box">
+              <h3>Life Span</h3>
+              <p className="p lifeSpan">{dog.life_span}</p>
+            </div>
+            <div className="box">
+              <h3>Temperament</h3>
+              <p className="p temperament">{dog.temperament}</p>
+            </div>
           </div>
         </div>
       </div>
-      : <p> loading </p>
+      : <p> </p>
     )
 }
 

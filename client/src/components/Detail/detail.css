@@ -4,7 +4,6 @@ html {
   
 .details-modal {
     background: #fff;
-    border-radius: 0.5em;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     left: 50%;
     max-width: 90%;
@@ -14,10 +13,12 @@ html {
     transform: translate(-50%, -50%);
     width: 30em;
     text-align: left;
-    max-height: 90vh;
+    max-height: 70vh;
     display: flex;
     flex-direction: column;
     z-index: 999;
+    /* overflow: hidden; */
+    border-radius: 7%;
 }
 .details-modal .details-modal-close {
     align-items: center;
@@ -37,7 +38,6 @@ html {
 
 .details-modal .details-modal-title {
     color: #111827;
-    padding: 1.5em 2em;
     pointer-events: all;
     position: relative;
     width: calc(100% - 7.5em);
@@ -50,12 +50,13 @@ html {
 }
 .details-modal .details-modal-content {
     border-top: 1px solid #e0e0e0;
-    padding: 2em;
+    /* padding: 2em; */
     pointer-events: all;
-    overflow: auto;
     display: flex;
     flex-direction: column;
     text-align: center;
+    position: relative;
+    
     
 
 }
@@ -90,8 +91,8 @@ h3 {
 }
 
 .imgContainerDetail{
-    width: 350px;
-    height: 250px;
+    width: 100%;
+    height: 350px;
     /* overflow: hidden; */
     margin: 0 auto;
     /* pointer-events: none; */
@@ -102,5 +103,18 @@ h3 {
     height: 100%;
     object-fit: cover;
     object-position: top;
+    border-radius: 7%;
+
+}
+.border {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2em;
+    border-radius: 7%;
+    position: relative;
+    bottom: 50px;
     
 }

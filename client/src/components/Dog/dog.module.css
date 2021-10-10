@@ -74,12 +74,13 @@ h2 {
 }
 
 .temperaments {
-    height: 40%;
+    height: 35%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 15px;
 }
 
 .temperament {
@@ -94,11 +95,29 @@ h2 {
 }
 
 .title {
-    height: 25%;
+    height: 30%;
     display: flex;
     padding: 3px;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: center;
+}
+
+
+
+.weightContainer {
+    height: 30%;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
+.weight {
+    font-weight: 500;
+    width: 35px;
+    position: relative;
+    bottom: 20px;
+    color: white;
+    left: 3px;
+}

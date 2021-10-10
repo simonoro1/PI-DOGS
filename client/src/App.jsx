@@ -1,13 +1,16 @@
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import  Home  from "./home/Home";
-// import Landing from "./components/Landing/Landing";
+import Landing from "./components/Landing/Landing";
 
 const App = () => {
   return (
     <Router>
       <Switch> 
-        <Route path='/' exact>
+        <Route path='/home' exact>
             <Home/>
+        </Route>
+        <Route path='/' exact>
+            <Landing/>
         </Route>
       </Switch>
     </Router> 

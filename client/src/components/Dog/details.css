@@ -30,3 +30,10 @@ details summary::-webkit-details-marker {
     display: none;
 }
 
+
+.weighty {
+    color: RGB(29, 155 , 240);
+    font-size: 40px;
+    position: absolute;
+    
+}
