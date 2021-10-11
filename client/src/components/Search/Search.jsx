@@ -30,7 +30,9 @@ function Search() {
   return (
     <div className={styles.container}>
       <img src={doggys} alt=""  className={styles.doggys}/>
+      
       <form className={styles.searchBox} onSubmit={handleSubmit}>
+        <i class="fas fa-home home" onClick={() => dispatch(searchDogs(''))}></i>
         <input type="text" placeholder="By name" className={styles.search} value={input}  onChange={((e) => handleChange(e))}/>
         <img src={search} alt="" className={styles.searchButton}  onClick={handleSubmit}/>
       </form>

@@ -1,0 +1,124 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.createContainer {
+    width: 500px;
+    height: 800px;
+    /* margin: 0 auto; */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.createContainer h1 {
+    text-align: center;
+    color:  RGB(234, 76 , 137);
+    margin: 20px 0;
+}
+
+.createForm {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.input {
+    border-radius: 15px;
+    border: 1px solid gainsboro;
+    padding: 10px 10px;
+    margin: 10px;
+    
+}
+
+.weightContainer {
+    font-size: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.weightContainer i {
+    width: 100%;
+}
+.weight {
+    width: 92%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+/* 
+.height {
+    margin: 15px 0;
+
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.lifespan {
+    margin: 15px 0;
+
+    display: flex;
+    flex-direction: column;
+} */
+
+.iConteiner{
+    width: 10%;
+    text-align: center;
+}
+
+.profile {
+    margin-top: 30px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid gainsboro;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 10px auto;
+    cursor: pointer;}
+
+.profile img {
+    height: 100%;
+    width: 100%;
+    object-position: center;
+}
+
+.create {
+    margin: 10px auto;
+    color: white;
+    width: 100px;
+    border: none;
+    border-radius: 8px;
+    background-color: RGB(234, 76 , 137);
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+.temperaments {
+    height: 70px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 15px;
+}
+
+.temperament {
+    font-size: 12px;
+    display: inline-block;
+    color: white;
+    background:RGB(29, 155 , 240);
+    border-radius: 9px;
+    padding: 8px 10px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.temperament:hover {
+    background-color: red;
+}

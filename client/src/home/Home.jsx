@@ -5,13 +5,14 @@ import styles from './home.module.css'
 import Search from '../components/Search/Search';
 import Footer from '../components/Footer/Footer';
 import Dogs from '../components/Dogs/Dogs.jsx';
-import { fetchDogs} from '../actions/actions';
+import { fetchDogs, getTemperaments} from '../actions/actions';
 import {useDispatch} from 'react-redux'
 const Home = () => {
     const dispatch = useDispatch()
     
     useEffect(() => {
         dispatch(fetchDogs())
+        dispatch(getTemperaments())
     }, [])
     return (
         <div className="">

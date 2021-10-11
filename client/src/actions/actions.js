@@ -5,8 +5,10 @@ export const BACK_PAGE  = 'BACK_PAGE';
 export const ORDER_A = 'ORDER_A';
 export const ORDER_Z = 'ORDER_Z';
 export const ORDER_WEIGHT = 'ORDER_WEIGHT';
-export const SEARCH_DOGS = 'SEARCH_DOGS'
-export const FIND_TEMP = 'FIND_TEMP'
+export const SEARCH_DOGS = 'SEARCH_DOGS';
+export const FIND_TEMP = 'FIND_TEMP';
+export const GET_TEMPERAMENTS = 'GET_TEMPERAMENTS';
+
 
 
 export const fetchDogs = () => {
@@ -123,5 +125,16 @@ export const findTemperament = (temperament) => {
         type: FIND_TEMP,
         payload: temperament
 
+    }
+}
+
+
+export const getTemperaments = () => {
+    return  function(dispatch) {
+        fetch('/temperament')
+        .then(response => response.json())
+        .then(response => {
+            dispatch({type: GET_TEMPERAMENTS, payload: response })
+        })
     }
 }

@@ -1,0 +1,25 @@
+.filters{
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    border-bottom: 1px solid gainsboro;
+}
+
+
+.select {
+    width: 300px;
+    border: 1px solid gainsboro;
+    border-radius: 30px;
+    padding: 10px 10px;
+    outline: none;
+    margin-right: 50px;
+}
+
+.option {
+    font-size: 16px;
+}
+
+

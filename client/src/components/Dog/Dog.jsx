@@ -8,7 +8,7 @@ import { fetchDetail, findTemperament } from "../../actions/actions";
 function Dog(props) {
   const dispatch = useDispatch()
   let {name, img, temperament, id, weight} = props;
-  let temperaments = temperament.split(", ").slice(0, 3);
+  let temperaments = temperament.split(",").slice(0, 3);
 
   const dispatchScroll = () => {
     dispatch(fetchDetail(id))
@@ -32,7 +32,7 @@ function Dog(props) {
             </div>
             <div className={styles.temperaments}>
               {temperaments.map((temperament) => {
-                return <p className={styles.temperament} onClick={() => dispatch(findTemperament(temperament))}>#{temperament}</p>;
+                return <p className={styles.temperament} onClick={() => dispatch(findTemperament(temperament))}>#{temperament.trim()}</p>;
               })}
             </div>
             <div className={styles.weightContainer}>

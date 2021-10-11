@@ -1,4 +1,4 @@
-import { GET_DOGS, CHANGE_PAGE, GET_ID, BACK_PAGE, ORDER_A, ORDER_Z, ORDER_WEIGHT, SEARCH_DOGS, FIND_TEMP } from "../actions/actions"
+import { GET_DOGS, CHANGE_PAGE, GET_ID, BACK_PAGE, ORDER_A, ORDER_Z, ORDER_WEIGHT, SEARCH_DOGS, FIND_TEMP, GET_TEMPERAMENTS } from "../actions/actions"
 
 const initialState = {
     dogs: [],
@@ -8,18 +8,19 @@ const initialState = {
     favoritesDogs: [],
     createdDogs: [],
     loaded: false,
+    temperaments: []
 }
 
 const compareDogsA = (a,b) => {
-    if (a.name > b.name) return 1;
-    if (a.name < b.name) return -1;
-    if (a.name === b.name) return 0;     
+    if (a.name.toLowerCase() > b.name.toLowerCase()) return 1;
+    if (a.name.toLowerCase() < b.name.toLowerCase()) return -1;
+    if (a.name.toLowerCase() === b.name.toLowerCase()) return 0;     
 }
 
 const compareDogsZ = (a,b) => {
-    if (a.name > b.name) return -1;
-    if (a.name < b.name) return 1;
-    if (a.name === b.name) return 0;     
+    if (a.name.toLowerCase() > b.name.toLowerCase()) return -1;
+    if (a.name.toLowerCase() < b.name.toLowerCase()) return 1;
+    if (a.name.toLowerCase() === b.name.toLowerCase()) return 0;     
 }
 
 const compareWeights = (a,b, weight) => {
@@ -108,6 +109,11 @@ function rootReducer(state = initialState, action) {
                 dogsLoaded: findTemp.slice(0,8),
                 page: 1
 
+            }
+        case GET_TEMPERAMENTS: 
+            return {
+                ...state,
+                temperaments: action.payload,
             }
         default: 
         

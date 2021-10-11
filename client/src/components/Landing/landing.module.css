@@ -14,10 +14,10 @@
     animation: bounce1 1s alternate infinite ease-in;
 }
 
-img:hover + span {
+/* img:hover + span {
     opacity: 1;
     transform: translate(-300%, 0);
-}
+} */
 
 /* .img:active {
     animation: bounce2 1s alternate infinite ease-in;
@@ -37,16 +37,15 @@ img:hover + span {
 
 
 .launch {
-    background-color: black;
     animation: bounce2 1s alternate infinite ease-in;
-
 }
 
-@keyframes bounce2 {
-        0% {
-            transform: translateY(-180%);
-        }
-        100% {
-            transform: translateY((0%));
-        }
+ @keyframes bounce2 {
+    0% {
+        transform: translateY(-20%);
     }
+    100% {
+        transform: translateY((-180%));
+    }
+  
+} 

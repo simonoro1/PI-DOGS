@@ -8,10 +8,11 @@ function Landing() {
     const img = useRef()
 
     const handleDelay = (e) => {
-        e.preventDefault();
+        e.preventDefault()
+
         window.setTimeout(() => {
            history.push('/home')
-        }, 3000)
+        }, 1000)
     }
 
     // const handleClick = () => {
@@ -22,7 +23,7 @@ function Landing() {
         <div className={styles.container}>
             <div className="">
             <Link to='/home' onClick={handleDelay}>
-                <img src={astronaut} ref={img} alt="" className={styles.img}  />
+                <img src={astronaut} ref={img} alt="" className={styles.img} />
             </Link>
             </div>
         </div>
