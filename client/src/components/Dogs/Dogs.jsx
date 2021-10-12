@@ -9,7 +9,7 @@ import loading from '../../Eclipse-1s-200px.gif';
 function Dogs() {
   const dispatch = useDispatch()
   let page = useSelector(state => state.page)
-  let dogss = useSelector(state => state.dogs)
+  let dogss = useSelector(state => state.dogsCopy)
   let temperaments = useSelector(state => state.temperaments)
   const dogs = useSelector(state => state.dogsLoaded)
   const loaded = useSelector(state => state.loaded)
@@ -50,8 +50,8 @@ function Dogs() {
         <p className={`page ${page === 1 ? 'hidepage': ''}`} onClick={() => dispatch(backPage(page))}  >{page-1}</p>
         <p className="page actual">{page}</p>
         <p className={`page ${page === pages ? 'hidepage': ''}`} onClick={() => dispatch(changePage(page))}>{page + 1}</p>
-        <i class={`fas fa-angle-right ${page === pages ? 'hide' : '' }`} onClick={() => dispatch(changePage(page))}></i>
-        <i class={`fas fa-angle-double-right ${page === pages ? 'hide' : '' }`} onClick={() => dispatch(changePage(21))}></i>
+        <i class={`fas fa-angle-right ${page >= pages ? 'hide' : '' }`} onClick={() => dispatch(changePage(page))}></i>
+        <i class={`fas fa-angle-double-right ${page >= pages ? 'hide' : '' }`} onClick={() => dispatch(changePage(pages - 1))}></i>
 
       </div>
     </div>

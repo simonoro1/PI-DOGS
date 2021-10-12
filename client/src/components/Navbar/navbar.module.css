@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border-bottom: 1px solid gainsboro; */
+
 
 }
 
@@ -34,5 +34,5 @@ li {
     padding-bottom: 10px;
 }
 .links:hover {
-    border-bottom: 4px solid cornflowerblue;
+    color: RGB(72, 137 , 244);
 }

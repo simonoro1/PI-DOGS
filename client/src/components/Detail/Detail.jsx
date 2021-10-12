@@ -32,10 +32,10 @@ function Detail() {
             <div class="details-modal-title">
               <h1>{dog.name}</h1>
             </div>
-            <div className="box">
+            {/* <div className="box">
               <h3>Type</h3>
               <p className="p breed">{dog.breed_group}</p>
-            </div>
+            </div> */}
             <div className="box">
               <h3>Weight</h3>
               <p className="p weight">{dog.weight.imperial} lb</p>
@@ -44,10 +44,10 @@ function Detail() {
               <h3>Height</h3>
               <p className="p height">{dog.height.imperial}"</p>
             </div>
-            <div className="box">
+            {/* <div className="box">
               <h3>Bred For</h3>
               <p className="p bred">{dog.bred_for}</p>
-            </div>
+            </div> */}
             <div className="box">
               <h3>Life Span</h3>
               <p className="p lifeSpan">{dog.life_span}</p>

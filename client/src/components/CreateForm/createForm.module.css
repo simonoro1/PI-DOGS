@@ -4,18 +4,34 @@
     align-items: center;
 }
 .createContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     width: 500px;
-    height: 800px;
+    height: 750px;
     /* margin: 0 auto; */
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 20px;
-    padding: 20px;
+    padding: 20px 20px 0px 20px;
+    margin-top: 40px;
 }
 
 .createContainer h1 {
     text-align: center;
     color:  RGB(234, 76 , 137);
     margin: 20px 0;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title img {
+    position: absolute;
+    width: 200px;
+    top: 20px;
 }
 
 .createForm {
@@ -28,7 +44,7 @@
     border-radius: 15px;
     border: 1px solid gainsboro;
     padding: 10px 10px;
-    margin: 10px;
+    margin: 6px;
     
 }
 
@@ -42,6 +58,8 @@
 
 .weightContainer i {
     width: 100%;
+    color: RGB(45, 134 , 192);
+    font-size: 30px;
 }
 .weight {
     width: 92%;
@@ -87,17 +105,19 @@
 }
 
 .create {
-    margin: 10px auto;
+    margin: 20px auto;
     color: white;
     width: 100px;
     border: none;
     border-radius: 8px;
-    background-color: RGB(234, 76 , 137);
+    background-color:RGB(242, 190 , 115);
     padding: 10px;
     cursor: pointer;
 }
 
-
+.create:hover {
+    opacity: 0.7;
+}
 .temperaments {
     height: 70px;
     margin: 0 auto;

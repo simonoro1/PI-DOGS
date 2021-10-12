@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import styles from "./createForm.module.css";
 import profile from "../../images.png";
+import hug from "../../hug.jpg";
+
 import Preview from "../Preview/Preview";
 
 function CreateForm() {
@@ -22,6 +24,14 @@ function CreateForm() {
     e.preventDefault()
     let prop = e.target.id;
     if (prop === "temperament") {
+      let flag = false
+      dog.temperament.forEach(temperament => {
+        if(temperament === e.target.value) {
+          flag =  true
+          return
+        }
+      })
+      if(flag) return alert('Ya ha añadido ese temperemento!!')
       if (dog.temperament.length > 6)
         alert("Ya ha ingresado demasiados temperamentos");
       else {
@@ -52,19 +62,19 @@ function CreateForm() {
   }
 
   const handleOnSubmit = async (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     postData(dog)
     .then(data => {console.log(data)})
+    alert('Dog created successfully!!🐶')
   }
   // action="/dogs" enctype="application/x-www-form-urlencoded" method="post"
   return (
     <div className={styles.container}>
       <div className={styles.createContainer}>
         <form className={styles.createForm} onChange={(e) => handleOnchange(e)}  onSubmit={(e) => handleOnSubmit(e)}>
-          <h1>CREATE A NEW DOG</h1>
-          {/* <div className={styles.profile}>
-          <img src={profile} alt="" />
-        </div> */}
+          <div className={styles.title}>
+            <img src={hug} alt="" />
+         </div>
           <div className={styles.weightContainer}>
             <div className={styles.iConteiner}>
               <i class="fas fa-image"></i>

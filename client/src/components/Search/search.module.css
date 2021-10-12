@@ -24,13 +24,14 @@
 
 .searchBox i {
     margin-right: 60px;
+    color: RGB(72, 137 , 244);
 }
 .searchTitle{
     margin-top: 50px;
     font-size: 70px;
 }
 .search{
-    width: 250px;
+    width: 550px;
     border-radius: 20px;
     padding: 12px 20px;
     border: none;

@@ -2,6 +2,9 @@
     /* position: relative; */
     display: flex;
     flex-direction: column;
+        /* background-image: url('https://i.pinimg.com/originals/5b/30/96/5b309622fc4037061190c767cdec8ca3.jpg'); */
+
+    
 }
 
 .container {
@@ -13,6 +16,7 @@
     flex-wrap: wrap;
     align-content: center;
     /* margin: 0 auto; */
+    
 }
 
 .load{

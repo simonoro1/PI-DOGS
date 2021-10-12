@@ -17,8 +17,8 @@ const Home = () => {
     return (
         <div className="">
             <Navbar/>
-            <div className={styles.container}>
                 <Search/>
+            <div className={styles.container}>
                 <Dogs/>
             </div>
             <Footer/>            
