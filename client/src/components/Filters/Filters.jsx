@@ -14,6 +14,14 @@ function Filters() {
     let tempFilter = useSelector(state => state.tempFilter)
 
     const handleOnchange = (e) => {
+          let flag = false
+          tempFilter.forEach(temperament => {
+            if(temperament === e.target.value) {
+              flag =  true
+              return
+            }
+          })
+          if(flag) return alert('Ya ha añadido ese temperemento!!')
           if (tempFilter.length > 3)
             alert("Ya ha ingresado demasiados temperamentos");
           else {

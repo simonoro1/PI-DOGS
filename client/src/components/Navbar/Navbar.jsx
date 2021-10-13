@@ -15,7 +15,11 @@ function Navbar() {
             <nav className={styles.menu}>
                 <ul className={styles.nav}>
                     <li><Link to='/home'  className={styles.links}>Home</Link></li>
-                    <li><Link to='/create' className={styles.links}>Create</Link></li>
+                    <Link to='/create' className={styles.links}>
+                        <button className={styles.create}>
+                            Create
+                        </button>   
+                    </Link>
                 </ul>
             </nav>
         </div>

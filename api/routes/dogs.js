@@ -91,7 +91,9 @@ router.post('/', async (req, res) => {
             imperial: `${minHeight} - ${maxHeight}`,
         },
         life_span:`${minLifespan} - ${maxLifespan}`,
+
         temperament: temperaments,
+        
         image: 
         {
             url: url

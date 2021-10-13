@@ -10,6 +10,7 @@
 
 .nav{
     display: flex;
+    align-items: baseline;
 }
 
 .img {
@@ -35,4 +36,20 @@ li {
 }
 .links:hover {
     color: RGB(72, 137 , 244);
+}
+
+.create {
+    margin: 20px auto;
+    color: white;
+    width: 100px;
+    border: none;
+    border-radius: 8px;
+    background-color:RGB(242, 190 , 115);
+    padding: 10px;
+    cursor: pointer;
+    margin-right: 50px;
+}
+
+.create:hover {
+    opacity: 0.7;
 }
