@@ -32,7 +32,7 @@ function Dog(props) {
             </div>
             <div className={styles.temperaments}>
               {temperaments.map((temperament) => {
-                return <p className={styles.temperament} onClick={() => dispatch(findTemperament(temperament))}>#{temperament.trim()}</p>;
+                return <p className={styles.temperament} key={temperament} onClick={() => dispatch(findTemperament(temperament))}>#{temperament.trim()}</p>;
               })}
             </div>
             <div className={styles.weightContainer}>

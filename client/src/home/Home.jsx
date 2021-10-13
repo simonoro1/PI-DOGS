@@ -7,13 +7,15 @@ import Footer from '../components/Footer/Footer';
 import Dogs from '../components/Dogs/Dogs.jsx';
 import { fetchDogs, getTemperaments} from '../actions/actions';
 import {useDispatch} from 'react-redux'
+
+
 const Home = () => {
     const dispatch = useDispatch()
     
     useEffect(() => {
         dispatch(fetchDogs())
         dispatch(getTemperaments())
-    }, [])
+    }, [dispatch])
     return (
         <div className="">
             <Navbar/>

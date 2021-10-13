@@ -8,18 +8,21 @@ import './icons.css'
 
 function Filters() {
     const dispatch = useDispatch()
-    const [update, setUpdate] = useState('')
+    // const [update, setUpdate] = useState('')
+    const [value, setVlaue] = useState('')
     let page = useSelector(state => state.page)
     let temperaments = useSelector(state => state.temperaments)
     let tempFilter = useSelector(state => state.tempFilter)
 
     const handleOnchange = (e) => {
+
+          setVlaue(e.target.value)
           let flag = false
           tempFilter.forEach(temperament => {
             if(temperament === e.target.value) {
               flag =  true
               return
-            }
+            } 
           })
           if(flag) return alert('Ya ha añadido ese temperemento!!')
           if (tempFilter.length > 3)
@@ -32,7 +35,7 @@ function Filters() {
     const handleClick = (e) => {
 
        dispatch(deleteFilter(e))
-       setUpdate({})
+      //  setUpdate({})
        
     }
     
@@ -40,11 +43,11 @@ function Filters() {
     return (
         <div className={styles.filters}>
             <div className={styles.filter}>
-                <select name="" id="" className={styles.select} defaultValue onChange={handleOnchange}>
-                    <option value='' selected disabled hidden>Choose here</option>
+                <select name="" id="" className={styles.select} value={value}  onChange={handleOnchange}>
+                    <option value=''  disabled hidden>Choose here</option>
                     {temperaments.map(temperament => {
 
-                        return <option id={temperament} value={temperament} className={styles.option}>{temperament}</option>
+                        return <option key={temperament} value={temperament} className={styles.option}>{temperament}</option>
                     }
                     )}
                 </select>
@@ -58,7 +61,7 @@ function Filters() {
               {
               tempFilter.map((temperament) => {
                 id ++
-                return <p className={styles.temperament} id={id} onClick= {handleClick} >#{temperament}</p>;
+                return <p className={styles.temperament} key={id} onClick= {handleClick} >#{temperament}</p>;
               })}
             </div>
           </div>

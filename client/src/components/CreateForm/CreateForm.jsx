@@ -45,7 +45,7 @@ function CreateForm() {
 
   const handleClick = (e) => {
       dog.temperament.splice(e.target.id,1)
-      setDog({ ...dog, ['temperament']: dog.temperament});
+      setDog({ ...dog, temperament: dog.temperament});
 
   }
 
@@ -76,7 +76,7 @@ function CreateForm() {
          </div>
           <div className={styles.weightContainer}>
             <div className={styles.iConteiner}>
-              <i class="fas fa-image"></i>
+              <i className="fas fa-image"></i>
             </div>
             <div className={styles.weight}>
               <input
@@ -90,7 +90,7 @@ function CreateForm() {
           </div>
           <div className={styles.weightContainer}>
             <div className={styles.iConteiner}>
-              <i class="fas fa-dog"></i>
+              <i className="fas fa-dog"></i>
             </div>
             <div className={styles.weight}>
               <input
@@ -105,7 +105,7 @@ function CreateForm() {
           </div>
           <div className={styles.weightContainer}>
             <div className={styles.iConteiner}>
-              <i class="fas fa-weight"></i>
+              <i className="fas fa-weight"></i>
             </div>
             <div className={styles.weight}>
               <input
@@ -132,7 +132,7 @@ function CreateForm() {
           </div>
           <div className={styles.weightContainer}>
             <div className={styles.iConteiner}>
-              <i class="fas fa-ruler-vertical"></i>
+              <i className="fas fa-ruler-vertical"></i>
             </div>
             <div className={styles.weight}>
               <input
@@ -159,7 +159,7 @@ function CreateForm() {
           </div>
           <div className={styles.weightContainer}>
             <div className={styles.iConteiner}>
-              <i class="fas fa-heartbeat"></i>
+              <i className="fas fa-heartbeat"></i>
             </div>
             <div className={styles.weight}>
               <input
@@ -186,7 +186,7 @@ function CreateForm() {
           </div>
           <div className={styles.weightContainer}>
             <div className={styles.iConteiner}>
-              <i class="fas fa-theater-masks"></i>
+              <i className="fas fa-theater-masks"></i>
             </div>
             <div className={styles.weight}>
               <select

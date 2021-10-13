@@ -10,7 +10,7 @@ function Navbar() {
                 <Link to='/'>
                     <img src={logo} alt="" className={styles.img}/>
                 </Link>
-                {/* <i class="fas fa-bone"></i> */}
+                {/* <i className="fas fa-bone"></i> */}
             </div>
             <nav className={styles.menu}>
                 <ul className={styles.nav}>

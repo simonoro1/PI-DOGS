@@ -30,15 +30,15 @@ function Dogs() {
               </select>
             </div>
             <div className={styles.order}>
-              <i class="fas fa-sort-alpha-down order" onClick= {() => dispatch(orderA(page))}></i>
-              <i class="fas fa-sort-alpha-down-alt order" onClick= {() => dispatch(orderZ(page))}></i>
-              <i class="fas fa-feather order" onClick= {() => dispatch(orderWeight(page,'light'))}></i>
-              <i class="fas fa-weight-hanging order" onClick= {() => dispatch(orderWeight(page, 'heavy'))}></i>
+              <i className="fas fa-sort-alpha-down order" onClick= {() => dispatch(orderA(page))}></i>
+              <i className="fas fa-sort-alpha-down-alt order" onClick= {() => dispatch(orderZ(page))}></i>
+              <i className="fas fa-feather order" onClick= {() => dispatch(orderWeight(page,'light'))}></i>
+              <i className="fas fa-weight-hanging order" onClick= {() => dispatch(orderWeight(page, 'heavy'))}></i>
             </div>
         </div> */}
         {loaded ? 
         dogs.map(dog => {
-          return <Dog name={dog.name} temperament={dog.temperament} weight={dog.weight.imperial} img={dog.image.url} id={dog.id}/>
+          return <Dog name={dog.name} temperament={dog.temperament} weight={dog.weight.imperial} img={dog.image.url} id={dog.id} key={dog.id}/>
         }) : <div className="loading"><img src={loading} alt="" /></div>
         }
  
