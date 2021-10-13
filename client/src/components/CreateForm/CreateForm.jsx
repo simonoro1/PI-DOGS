@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import styles from "./createForm.module.css";
-import profile from "../../images.png";
 import hug from "../../hug.jpg";
 
 import Preview from "../Preview/Preview";
@@ -52,7 +51,7 @@ function CreateForm() {
 
   const postData = async (data) => {
     console.log(data)
-    const response = await fetch('/dogs', {
+    await fetch('/dogs', {
       method : 'POST',
       headers: {
         'Content-Type':'application/json'
@@ -81,10 +80,11 @@ function CreateForm() {
             </div>
             <div className={styles.weight}>
               <input
-                type="text"
+                type="url"
                 id="url"
                 placeholder="Image url"
                 className={styles.input}
+                required
               />
             </div>
           </div>
@@ -99,6 +99,7 @@ function CreateForm() {
                 placeholder="Name"
                 className={styles.input}
                 required
+                maxLength='25'
               />
             </div>
           </div>
@@ -108,18 +109,24 @@ function CreateForm() {
             </div>
             <div className={styles.weight}>
               <input
-                type="text"
+                type="number"
                 id="minWeight"
                 placeholder="Min Weight"
+                
                 className={styles.input}
                 required
+                min='3'
+                max='100'
               />
               <input
-                type="text"
+                type="number"
                 id="maxWeight"
                 placeholder="Max Weight"
                 className={styles.input}
                 required
+                min='6'
+                max='200'
+
               />
             </div>
           </div>
@@ -129,18 +136,24 @@ function CreateForm() {
             </div>
             <div className={styles.weight}>
               <input
-                type="text"
+                type="number"
                 id="minHeight"
                 placeholder="Min Height"
                 className={styles.input}
                 required
+                min='8'
+                max='40'
+
               />
               <input
-                type="text"
+                type="number"
                 id="maxHeight"
                 placeholder="Max Height"
                 className={styles.input}
                 required
+                min='10'
+                max='50'
+
               />
             </div>
           </div>
@@ -150,18 +163,24 @@ function CreateForm() {
             </div>
             <div className={styles.weight}>
               <input
-                type="text"
+                type="number"
                 id="minLifespan"
                 placeholder="Min Lifespan"
                 className={styles.input}
                 required
+                maxLength='2'
+                min='5'
+                max='15'
               />
               <input
-                type="text"
+                type="number"
                 id="maxLifespan"
                 placeholder="Max Lifespan"
                 className={styles.input}
                 required
+                maxLength='2'
+                min='15'
+                max='30'
               />
             </div>
           </div>

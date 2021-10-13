@@ -8,7 +8,7 @@ function Preview(props) {
     return (
         <div className={styles.preview}>
             <div className={styles.imgContainer}>
-                {!img ? <img src={profile} alt="" /> : <img src={img}/>}
+                {!img ? <img src={profile} alt=""/> : <img src={img} alt=""/>}
             </div>
             <div className={styles.description}>
                 <h2>{name}</h2>

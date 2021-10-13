@@ -26,6 +26,9 @@ function Landing() {
                 <img src={astronaut} ref={img} alt="" className={styles.img} />
             </Link>
             </div>
+            <Link to='/home' onClick={handleDelay}>
+            <button className={styles.button}>Click Me !!</button>
+            </Link>
         </div>
     )
 }

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./search.module.css";
 import doggys from "../../doggys.png"
 import search from "../../search.png"
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
 import { fetchDogs, searchDogs } from "../../actions/actions";
 
 
@@ -32,7 +32,7 @@ function Search() {
       
       <img src={doggys} alt=""  className={styles.doggys}/>
       <form className={styles.searchBox} onSubmit={handleSubmit}>
-        <i class="fas fa-home home" onClick={() => dispatch(fetchDogs())}></i>
+        <i className="fas fa-home home" onClick={() => dispatch(fetchDogs())}></i>
         <input type="text" placeholder="By name" className={styles.search} value={input}  onChange={((e) => handleChange(e))}/>
         <img src={search} alt="" className={styles.searchButton}  onClick={handleSubmit}/>
       </form>

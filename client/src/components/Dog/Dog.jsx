@@ -22,7 +22,7 @@ function Dog(props) {
             <img src={img} alt="" className={styles.img} />
             {/* <span className={styles.span}>Learn More !</span> */}
           </div>
-          <div class="details-modal-overlay"></div>
+          <div className="details-modal-overlay"></div>
         </summary>
         <Detail/>
      </details>
@@ -36,7 +36,7 @@ function Dog(props) {
               })}
             </div>
             <div className={styles.weightContainer}>
-              <i class="fas fa-weight-hanging weighty">
+              <i className="fas fa-weight-hanging weighty">
                 <h3 className={styles.weight}>{weight} lb</h3>
               </i>
             </div>

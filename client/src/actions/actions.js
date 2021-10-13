@@ -31,8 +31,6 @@ export const fetchDogs = () => {
                     return dog.weight.imperial = '18 - 25'
                 }
                 dog.weight.imperial = dog.weight.imperial.split(" ")[0]; 
-                
-
                 return dog.weight.imperial
             })
             dispatch({type: GET_DOGS, payload: response})
@@ -60,7 +58,6 @@ export const backPage = (page) => {
 
 export const fetchDetail = (id) => {
     return function(dispatch){
-        // console.log('perritos')
         fetch(`/dogs/${id}`)
         .then(response => response.json())
         .then(response  =>  { 
@@ -74,6 +71,7 @@ export const fetchDetail = (id) => {
                 if(dog.id === 179) {
                     return dog.weight.imperial = '65 - 85'
                 }
+                return dog.weight.imperial
             })
             dispatch({type: GET_ID, payload: response})
         })

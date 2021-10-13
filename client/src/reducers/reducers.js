@@ -11,6 +11,7 @@ const initialState = {
     loaded: false,
     temperaments: [],
     tempFilter: [],
+    cache: []
     
 }
 
@@ -89,7 +90,7 @@ function rootReducer(state = initialState, action) {
             }
         case ORDER_WEIGHT:
             let weight = action.weight
-            let orderedWeights = state.dogs.sort((a,b) => compareWeights(a,b,weight))
+            let orderedWeights = state.dogsCopy.sort((a,b) => compareWeights(a,b,weight))
             return {
                 ...state,
                 dogs: orderedWeights,
@@ -111,6 +112,7 @@ function rootReducer(state = initialState, action) {
             return {
                 ...state,
                 dogsCopy: findTemp,
+                cache: state.dogsCopy,
                 dogsLoaded: findTemp.slice(0,8),
                 tempFilter: state.tempFilter.concat(action.payload),
                 page: 1
@@ -150,7 +152,11 @@ function rootReducer(state = initialState, action) {
 
             return {
                 ...state,
-                tempFilter: deleted
+                tempFilter: deleted,
+                dogsCopy: state.cache,
+                dogsLoaded: state.cache.slice(0,8),
+                page: 1,
+
             }
 
 

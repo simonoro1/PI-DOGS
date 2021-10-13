@@ -13,7 +13,18 @@ router.get('/', async (req, res) => {
     })
     try {
         const response = await axios.get(`https://api.thedogapi.com/v1/breeds?apiKey=${api_key}`)
+        response.data.map( dog => {
+
+            if(dog.id === 196 || dog.id === 197 || dog.id === 211 || dog.id === 232) {
+                
+                return dog.weight.imperial = '15'
+            }
+            if(dog.id == 261){
+                return dog.weight.imperial = '45'
+            }
+        })
         const dogs = response.data.concat(created)
+        
 
         if(name) {
             const filtered = dogs.filter( dog => dog.name.toLowerCase().includes(name.toLowerCase()))

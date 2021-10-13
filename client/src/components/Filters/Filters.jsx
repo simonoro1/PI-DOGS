@@ -24,18 +24,19 @@ function Filters() {
     const handleClick = (e) => {
 
        dispatch(deleteFilter(e))
-        setUpdate('Updated')
+       setUpdate({})
+       
     }
     
     let id = -1;
     return (
         <div className={styles.filters}>
             <div className={styles.filter}>
-                <select name="" id="" className={styles.select} onChange={handleOnchange}>
+                <select name="" id="" className={styles.select} defaultValue onChange={handleOnchange}>
                     <option value='' selected disabled hidden>Choose here</option>
                     {temperaments.map(temperament => {
 
-                        return <option value={temperament} className={styles.option}>{temperament}</option>
+                        return <option id={temperament} value={temperament} className={styles.option}>{temperament}</option>
                     }
                     )}
                 </select>
@@ -54,10 +55,10 @@ function Filters() {
             </div>
           </div>
             <div className={styles.order}>
-            <i class="fas fa-sort-alpha-down order" onClick= {() => dispatch(orderA(page))}></i>
-            <i class="fas fa-sort-alpha-down-alt order" onClick= {() => dispatch(orderZ(page))}></i>
-            <i class="fas fa-feather order" onClick= {() => dispatch(orderWeight(page,'light'))}></i>
-            <i class="fas fa-weight-hanging order" onClick= {() => dispatch(orderWeight(page, 'heavy'))}></i>
+            <i className="fas fa-sort-alpha-down order" onClick= {() => dispatch(orderA(page))}></i>
+            <i className="fas fa-sort-alpha-down-alt order" onClick= {() => dispatch(orderZ(page))}></i>
+            <i className="fas fa-feather order" onClick= {() => dispatch(orderWeight(page,'light'))}></i>
+            <i className="fas fa-weight-hanging order" onClick= {() => dispatch(orderWeight(page, 'heavy'))}></i>
             </div>
         </div>
     )

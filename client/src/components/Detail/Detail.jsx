@@ -7,8 +7,8 @@ function Detail() {
     const dog = useSelector(state => state.detailDog[0])
     return (
         dog ?
-        <div class="details-modal">
-        <div class="details-modal-close">
+        <div className="details-modal">
+        <div className="details-modal-close">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="14"
@@ -24,12 +24,12 @@ function Detail() {
               />
           </svg>
         </div>
-        <div class="details-modal-content">
+        <div className="details-modal-content">
           <div className="imgContainerDetail">
             <img src={dog.image.url} alt="" className="imgDetail"/>
           </div>
           <div className="border">
-            <div class="details-modal-title">
+            <div className="details-modal-title">
               <h1>{dog.name}</h1>
             </div>
             {/* <div className="box">
