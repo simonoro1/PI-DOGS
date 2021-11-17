@@ -11,9 +11,15 @@ function Footer() {
                     <img src={logo} alt="" className={styles.logo}/>
                 </div>
                 <div className={styles.details}>
-                    <i className="fab fa-instagram footer-i instagram"></i>
-                    <i className="fab fa-linkedin-in footer-i linkedin"></i>
-                    <i className="fab fa-github footer-i github"></i>
+                    <a href="https://www.instagram.com/simonn_oro/">
+                        <i className="fab fa-instagram footer-i instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/simon-oro-5a30b3197/">
+                        <i className="fab fa-linkedin-in footer-i linkedin"></i>
+                    </a>
+                    <a href="https://github.com/simonoro1">
+                        <i className="fab fa-github footer-i github"></i>
+                    </a>
                 </div>
             </div>
             <div className={styles.bottom}>
